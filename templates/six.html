@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Test task it_upgrade</title>
+  </head>
+  <body>
+    <h2>Шестой отчет</h2>
+    <p>6. Сколько брошенных (не оплаченных) корзин имеется?</p>
+    <form method="POST" action="/six">
+      {{ form.csrf_token }}
+      {{ form.pole1.label }} {{ form.pole1(size=20) }}
+      {{ form.pole2.label }} {{ form.pole2(size=20) }}
+      <input type="submit" value="Посчитать">
+    </form>
+    <p> Ответ: {{count}}  </p>
+
+    <p><a href="{{ url_for('index') }}">Вернуться на главную</a></p>
+  </body>
+</html>

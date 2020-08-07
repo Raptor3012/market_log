@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Test task it_upgrade</title>
+  </head>
+  <body>
+    <h2>Второй отчет</h2>
+    <p>2. Посетители из какой страны чаще всего интересуются товарами из категории “fresh_fish”?</p>
+    
+    <p>Страна Narnia выставлялась тем пользователям чью страну определить по ip не удалось</p>
+    {% for obj in result %}
+     <p>{{obj}}</p>
+    {% endfor %}
+
+    <p><a href="{{ url_for('index') }}">Вернуться на главную</a></p>
+  </body>
+</html>
